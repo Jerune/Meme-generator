@@ -119,4 +119,29 @@ fieldset {
   font-family: "Karla", sans-serif;
   letter-spacing: -0.05em;
   cursor: pointer;
+}
+
+.meme {
+  margin-top: 36px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.meme img {
+  width: 100%;
+}
+.meme h4 {
+  font-family: "impactregular";
+  font-size: 2rem;
+  text-transform: uppercase;
+  -webkit-text-stroke: 2px solid #000000;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+}
+.meme_top-text {
+  top: 16px;
+}
+.meme_bottom-text {
+  bottom: 16px;
 }/*# sourceMappingURL=main.css.map */
