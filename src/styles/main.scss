@@ -1,7 +1,8 @@
 // Utils
-@import "./sass/general.scss";
 @import "./sass/variables.scss";
+@import "./sass/general.scss";
 
 // Components
-
-// Pages
+@import "../components/Header/Header.scss";
+@import "../components/Form/Form.scss";
+@import "../components/Meme/Meme.scss";
