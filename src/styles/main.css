@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "impactregular";
+  src: url("../assets/fonts/unicode.impact-webfont.woff2") format("woff2"), url("../assets/fonts/unicode.impact-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   box-sizing: border-box;
 }
@@ -6,8 +12,13 @@
   font-size: 16px;
 }
 
+#root {
+  width: 550px;
+  margin: 0 auto;
+}
+
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Karla", sans-serif;
   color: white;
   margin: 0;
 }
@@ -24,15 +35,88 @@ h1, h2, h3, p {
 h1 {
   font-size: 1.297rem;
   font-weight: 700;
+  letter-spacing: -0.05em;
 }
 
 h2 {
   font-size: 0.75rem;
   font-weight: 500;
+  font-family: "Inter", sans-serif;
 }
 
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.header {
+  height: 65px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 20px;
+  background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+}
+.header img {
+  width: 31px;
+}
+.header h1 {
+  padding-left: 7px;
+  margin-right: auto;
+}
+
+.main {
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.form_textInputs {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.form_textInputs input {
+  width: 48%;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  padding: 0 11px;
+  border: 1px solid #D5D4D8;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+.form button {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+  color: white;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: "Karla", sans-serif;
+  letter-spacing: -0.05em;
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */

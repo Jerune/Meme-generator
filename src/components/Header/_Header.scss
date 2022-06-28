@@ -1,0 +1,17 @@
+.header{
+    height: 65px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 20px;
+    background: $color-background;
+    img{
+        width: 31px;
+    }
+    h1{
+        padding-left: 7px;
+        margin-right: auto;
+    }
+}

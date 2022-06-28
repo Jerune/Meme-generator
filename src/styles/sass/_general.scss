@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'impactregular';
+    src: url('../assets/fonts/unicode.impact-webfont.woff2') format('woff2'),
+         url('../assets/fonts/unicode.impact-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 *{
     box-sizing: border-box
 }
@@ -5,8 +13,13 @@
     font-size: 16px;
 }
 
+#root{
+    width: 550px;
+    margin: 0 auto;
+}
+
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Karla', sans-serif;
     color: white;
     margin: 0;
 }
@@ -23,15 +36,23 @@ h1, h2, h3, p{
 h1{
     font-size: 1.297rem;
     font-weight: 700;
+    letter-spacing: -0.05em;
 }
 
 h2{
     font-size: 0.75rem;
     font-weight: 500;
+    font-family: 'Inter', sans-serif;
 }
 
 ul{
     list-style: none;
     padding: 0;
     margin: 0;
+}
+
+fieldset{
+    margin: 0;
+    padding: 0;
+    border: none;
 }
