@@ -1,4 +1,3 @@
-import Meme from "../Meme/Meme";
 import { memesData } from "../../data/memesData";
 // @ts-ignore
 import React, { useState } from "react";
@@ -6,8 +5,8 @@ import React, { useState } from "react";
 export default function MainContent() {
   const [activeMeme, updateMeme] = useState({
     url: "./memeimg.jpg",
-    topText: "Shut up",
-    bottomText: "and take my money",
+    topText: "",
+    bottomText: "",
   });
 
   function generateMeme() {
