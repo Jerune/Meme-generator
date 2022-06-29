@@ -1,3 +1,4 @@
+import Meme from "../Meme/Meme";
 import { memesData } from "../../data/memesData";
 // @ts-ignore
 import React, { useState } from "react";
