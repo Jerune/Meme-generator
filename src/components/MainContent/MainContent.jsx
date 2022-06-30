@@ -19,18 +19,14 @@ export default function MainContent() {
     }));
   }
 
-  function changeText(event, element) {
-    if (element === "toptext") {
-      updateMeme((prevState) => ({
+  function changeText(event) {
+    const { name, value, type, checked } = event.target;
+    updateMeme((prevState) => {
+      return {
         ...prevState,
-        topText: event.target.value,
-      }));
-    } else if (element === "bottomtext") {
-      updateMeme((prevState) => ({
-        ...prevState,
-        bottomText: event.target.value,
-      }));
-    }
+        [name]: type === "checkbox" ? checked : value,
+      };
+    });
   }
 
   return (
@@ -38,16 +34,18 @@ export default function MainContent() {
       <section className="form">
         <fieldset className="form_textInputs">
           <input
-            onChange={(e) => changeText(e, "toptext")}
+            onChange={changeText}
             type="text"
-            id="toptext"
+            name="topText"
             placeholder="Shut up"
+            value={activeMeme.topText}
           />
           <input
-            onChange={(e) => changeText(e, "bottomtext")}
+            onChange={changeText}
             type="text"
-            id="bottomtext"
+            name="bottomtext"
             placeholder="and take my money"
+            value={activeMeme.bottomText}
           />
         </fieldset>
         <button onClick={generateMeme}>Get a new meme image &#128444;</button>
