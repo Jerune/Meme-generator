@@ -43,7 +43,7 @@ export default function MainContent() {
           <input
             onChange={changeText}
             type="text"
-            name="bottomtext"
+            name="bottomText"
             placeholder="and take my money"
             value={activeMeme.bottomText}
           />
