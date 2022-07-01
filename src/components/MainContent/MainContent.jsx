@@ -11,9 +11,16 @@ export default function MainContent() {
   });
 
   useEffect(() => {
-    fetch("https://api.imgflip.com/get_memes")
-      .then((res) => res.json())
-      .then((data) => setAllMemes(data.data.memes));
+    async function getMemes() {
+      try {
+        const memesData = await fetch("https://api.imgflip.com/get_memes");
+        const { memes } = await memesData.data.json();
+        setAllMemes(memes);
+      } catch (err) {
+        console.log(err);
+      }
+    }
+    getMemes();
   }, []);
 
   function generateMeme() {
