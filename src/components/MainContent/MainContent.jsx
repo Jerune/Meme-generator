@@ -14,8 +14,8 @@ export default function MainContent() {
     async function getMemes() {
       try {
         const memesData = await fetch("https://api.imgflip.com/get_memes");
-        const { memes } = await memesData.data.json();
-        setAllMemes(memes);
+        const memes = await memesData.json();
+        setAllMemes(memes.data.memes);
       } catch (err) {
         console.log(err);
       }
